@@ -1,7 +1,7 @@
 # Pinball Game 
 Within my pinball game I chose to feature I chose to implement the following features:
 <ul>
-  <li> Basic Pinball Dynamics </li>
+  <li> [Basic Pinball Dynamics] (#basic-pinball-dynamics) </li>
   <li> Multiple Balls Interacting </li>
   <li> Circular Obstacles </li>
   <li> Line-Segment/Polygonal Obstacles </li>
@@ -11,3 +11,5 @@ Within my pinball game I chose to feature I chose to implement the following fea
   <li> Load Scenes From Files </li>
   <li> User-Interactive Flippers </li>
 </ul>
+
+### Basic Pinball Dynamics
