@@ -1,15 +1,23 @@
 # Pinball Game 
+## Table of Contents
 Within my pinball game I chose to feature I chose to implement the following features:
-<ul>
-  <li> [Basic Pinball Dynamics](#basic-pinball-dynamics) </li>
-  <li> Multiple Balls Interacting </li>
-  <li> Circular Obstacles </li>
-  <li> Line-Segment/Polygonal Obstacles </li>
-  <li> Plunger/Launcher </li>
-  <li> Textured Background </li>
-  <li> Reactive Obstacles </li>
-  <li> Load Scenes From Files </li>
-  <li> User-Interactive Flippers </li>
-</ul>
 
-### Basic Pinball Dynamics
+- [Basic Pinball Dynamics](#basic-pinball-dynamics)
+- [Multiple Balls Interacting](#multiple-balls-interacting)
+- [Circular Obstacles](#circular-obstacles)
+- [Line-Segment/Polygonal Obstacles](#line-segmentpolygonal-obstacles)
+- [Plunger/Launcher](#plungerlauncher)
+- [Textured Background](#textured-background)
+- [Reactive Obstacles](#reactive-obstacles)
+- [Load Scenes From Files](#load-scenes-from-files)
+- [User-Interactive Flippers](#user-interactive-flippers)
+
+## Basic Pinball Dynamics
+## Multiple Balls Interacting
+## Circular Obstacles
+## Line-Segment/Polygonal Obstacles
+## Plunger/Launcher
+## Textured Background
+## Reactive Obstacles
+## Load Scenes From Files
+## User-Interactive Flippers
