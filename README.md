@@ -27,18 +27,14 @@ In the video above, starting at 0:04 second mark, the ball can be seen exhibitin
 ## Multiple Balls Interacting
 Once more balls are triggered, the new balls follow the same pinball dynamics as the original ball while in motion. Likewise, it follows the same physics of acceleration and using it to calculate updated velocity and position of the ball. When colliding with another ball in motion there is an elastic collision as they fall.
 
-<video width="1000" height="650" controls> 
-    <source src="Videos/ballColliding.mov" type="video/mp4">
-</video>
+[Watch Video](https://drive.google.com/file/d/1nmHzQ3h6ywP5jrcgMH1O2OeeyxcbLDyh/view?usp=sharing)
 
 The video above demonstrates the trigger of multiple balls, how it interacts with the obstacles as well as other balls.
 
 ## Circular Obstacles
 Circles are one of the shapes that the ball can bounce off of. In order to replicate the ball's natural collision with a circle, the direction of the velocity vector is reversed.
 
-<video width="1000" height="650" controls> 
-    <source src="Videos/turtle.mov" type="video/mp4">
-</video>
+[Watch Video](https://drive.google.com/file/d/1rbw2V5rY8pTLmjVS2PzjP6fcGEpX9fL8/view?usp=drive_link)
 
 In this video, it can be seen how the ball object interacts with circular obstacles in a natural way.
 
@@ -52,36 +48,28 @@ In this video, it can be seen how the ball interacts with lines and polygonal (b
 ## Plunger/Launcher
 The original ball begins in the bottom-right corner of the screen. It is launched when the user presses the space button on the keyboard.
 
-<video width="1000" height="650" controls> 
-    <source src="Videos/caratRec.mov" type="video/mp4">
-</video>
+[Watch Video](https://drive.google.com/file/d/1KKq9GYv3ZX5P5x49XBWxAuGHqzj0syA_/view?usp=sharing)
 
 The video above demonstrates the launcher at 0:09 seconds. The ball is launched when the user presses the space key.
 
 ## Textured Background
 The game has two imported backgrounds. The first has a blue background and a turtle in the middle of the screen. The second background is of a pink screen with the carat/Seventeen logo in the middle.
 
-<video width="1000" height="650" controls> 
-    <source src="Videos/changeBG.mov" type="video/mp4">
-</video>
+[Watch Video](https://drive.google.com/file/d/1qxnO41ARVWjtbG-jtezAmb1_HzLeA5Ug/view?usp=sharing)
 
 The video above shows the changing imported scenes of turtle.jpeg (at 0:19) and carat.jpg (at 0:29).
 
 ## Reactive Obstacles
 The game utilizes two collision reactive obstacles. The first occurs right after the ball is launched. Once it collides with the first line (also call the "curve") the line shifts to block the launch channel. The other reactive obstacle is the circle obstacle. When a ball collides with it, it triggers another ball to randomly fall from the top of the screen. This can happen a maximum of two times (i.e. up to three balls on the screen).
 
-<video width="1000" height="650" controls> 
-    <source src="Videos/turtle.mov" type="video/mp4">
-</video>
+[Watch Video](https://drive.google.com/file/d/1rbw2V5rY8pTLmjVS2PzjP6fcGEpX9fL8/view?usp=drive_link)
 
 The video shows two reactive obstacles. First, the curve blocking the launch channel at 0:03 and a new ball falling after colliding with the circle at 0:06.
 
 ## Load Scenes From Files
 There are three preset file scenes created for the game. Each of them have information for the scene's background, stroke color, fill color, obstacles, and obstacle's locations. The three files are layout1.txt, turtle.txt, and carat.txt. If the file says none for background then the scene will automatically have a plain color background. If the file says image then it utilizes a picture address.
 
-<video width="1000" height="650" controls> 
-    <source src="Videos/changeBG.mov" type="video/mp4">
-</video>
+[Watch Video](https://drive.google.com/file/d/1qxnO41ARVWjtbG-jtezAmb1_HzLeA5Ug/view?usp=sharing)
 
 The video above shows how to import files containing scene information by typing in the file name so it can be read and so that the data can be distributed to the proper variables.
 
@@ -97,3 +85,6 @@ Within the game, code and code structure was taken from class slides and given c
 
 ## Difficulties Encountered
 The first difficulty I encountered was with scaling of the objects when they were drawn and how that also affected the collision functions. At first I tried to remedy the collision issues with a tolerance variable. With some trial and error I found one that was just half of what I thought was the radius. Only when I found it did I realize the value I was using to draw the circle was the diameter and not the radius. After that the collisions worked better. The next difficulty I had was with the circle line collision. With my original algorithm, it would send the ball to the opposite side of the screen as soon as there was a collision. Part way through the debugging process Dr. Guy sent his code and I slightly modified it to fit my structure. Figuring out how the flippers worked was also difficult because as I was trying to figure it out, I was also trying to learn and understand the physics and math behind what should be done and why. This took time to figure out until Dr. Guy also sent the code. Once it was working in my code, it only took a little bit to modify the flipper's to fit on the screen better and to move by the arrow keys.
+
+
+[Watch Video](https://drive.google.com/file/d/1nmHzQ3h6ywP5jrcgMH1O2OeeyxcbLDyh/view?usp=sharing)
