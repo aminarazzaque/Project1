@@ -44,3 +44,9 @@ Within the game, code and code structure was taken from class slides and given c
 
 ## Difficulties Encountered
 The first difficulty I encountered was with scaling of the objects when they were drawn and how that also affected the collision functions. At first I tried to remedy the collision issues with a tolerance variable. With some trial and error I found one that was just half of what I thought was the radius. Only when I found it did I realize the value I was using to draw the circle was the diameter and not the radius. After that the collisions worked better. The next difficulty I had was with the circle line collision. With my original algorithm, it would send the ball to the opposite side of the screen as soon as there was a collision. Part way through the debugging process Dr. Guy sent his code and I slightly modified it to fit my structure. Figuring out how the flippers worked was also difficult because as I was trying to figure it out, I was also trying to learn and understand the physics and math behind what should be done and why. This took time to figure out until Dr. Guy also sent the code. Once it was working in my code, it only took a little bit to modify the flipper's to fit on the screen better and to move by the arrow keys.
+
+
+testing video
+<video width="2880" height="1586" controls> 
+    <source src="Videos/caratRec.mov" type="video/mov">
+</video>
