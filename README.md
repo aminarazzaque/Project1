@@ -20,9 +20,7 @@ Within my pinball game I chose to feature I chose to implement the following fea
 ## Basic Pinball Dynamics
 The program simulates basic pinball dynamic through an inclusion of an acceleration vector that is used when calculating the velocity and ball position vector. This can be seen when the ball arcs as it moves and slightly accelerates as it moves down the screen. It also has elastic collisions with obstacles and other balls in it's pathways which updates the position and velocity of the ball accordingly.
 
-<video width="1000" height="650" controls> 
-    <source src="https://drive.google.com/file/d/1IbqDBwTxfufkZTGM-iQLXWxdQ4pclI3d/view?usp=sharing" type="video/mp4">
-</video>
+<iframe width="560" height="315" src="https://drive.google.com/file/d/1IbqDBwTxfufkZTGM-iQLXWxdQ4pclI3d/view?usp=sharing" frameborder="0" allowfullscreen></iframe>
 
 In the video above, starting at 0:04 second mark, the ball can be seen exhibiting basic pinball dynamics as mentioned above.
 
