@@ -20,7 +20,7 @@ Within my pinball game I chose to feature I chose to implement the following fea
 ## Basic Pinball Dynamics
 The program simulates basic pinball dynamic through an inclusion of an acceleration vector that is used when calculating the velocity and ball position vector. This can be seen when the ball arcs as it moves and slightly accelerates as it moves down the screen. It also has elastic collisions with obstacles and other balls in it's pathways which updates the position and velocity of the ball accordingly.
 
-<iframe width="560" height="315" src="https://drive.google.com/file/d/1IbqDBwTxfufkZTGM-iQLXWxdQ4pclI3d/view?usp=sharing" frameborder="0" allowfullscreen></iframe>
+[Watch Video](https://drive.google.com/file/d/1IbqDBwTxfufkZTGM-iQLXWxdQ4pclI3d/view?usp=sharing)
 
 In the video above, starting at 0:04 second mark, the ball can be seen exhibiting basic pinball dynamics as mentioned above.
 
@@ -45,9 +45,7 @@ In this video, it can be seen how the ball object interacts with circular obstac
 ## Line-Segment/Polygonal Obstacles
 The other two obstacles the ball can bounce off of are lines and boxes. For the line, the line is normalized then projected to find the closest point. This is then used to calculate the new positions and velocity. For the boxes, it utilizes the line check on all the lines of the box.
 
-<video width="1000" height="650" controls> 
-    <source src="Videos/flipper.mov" type="video/mp4">
-</video>
+[Watch Video](https://drive.google.com/file/d/1IbqDBwTxfufkZTGM-iQLXWxdQ4pclI3d/view?usp=sharing)
 
 In this video, it can be seen how the ball interacts with lines and polygonal (box) shapes in a natural way.
 
@@ -90,9 +88,7 @@ The video above shows how to import files containing scene information by typing
 ## User-Interactive Flippers
 The game has two user-interactive flippers. The basic code is from Dr. Guy's given code. The flipper moves when the user holds down on the appropriate arrow key. For example, to move the right flipper then the right arrow key must be held down. The flippers utlize the ball line collision algorithm. If it hits the ball while moving then it calculates related angular properties to update the ball's features.
 
-<video width="1000" height="650" controls> 
-    <source src="Videos/flipper.mov" type="video/mp4">
-</video>
+[Watch Video](https://drive.google.com/file/d/1IbqDBwTxfufkZTGM-iQLXWxdQ4pclI3d/view?usp=sharing)
 
 The video above shows how flippers work. It starts with the right key being pressed to move the right flipper then the same is done with left. It also shows collision between the ball while the flipper is moving and when it is not.
 
