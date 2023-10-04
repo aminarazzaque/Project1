@@ -88,7 +88,7 @@ void fPhysicsComp(float dt, Flipper f) {
 //function to update ball physics
 void physicsComp(float dt, Vec2 ball, Vec2 vel) {
 
-     Vec2 acc = new Vec2(0, 80);
+     Vec2 acc = new Vec2(0, 90);
      vel.add(acc.times(dt));
      ball.add(vel.times(dt));
 }
