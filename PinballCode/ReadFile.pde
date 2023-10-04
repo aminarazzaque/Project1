@@ -46,6 +46,7 @@ public void File() {
       else if (s[i].startsWith("Line")) {
          type = "Line";
       }
+      
       else{
         String [] data = splitTokens(s[i], ",");
         if (type == "Box") {

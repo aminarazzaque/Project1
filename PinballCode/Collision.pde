@@ -1,6 +1,6 @@
  public class CollisionDetection {
   
-   //ball flipper trial
+   //taken from Dr. Guy and slightly modified
     void BallFlipper(Vec2 ball, float r, Vec2 vel, float rest, Flipper f) {
     //   float restitution = 0.8;
       Vec2 flipper_base = f.flipper_base;
@@ -193,6 +193,7 @@
   }
  }
  
+ //object with features defined by Dr. Guy
  public class Flipper {
     float min_angle, max_angle, angle, line_length, angular_velocity;
     Vec2 flipper_base;

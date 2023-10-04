@@ -11,6 +11,7 @@ float d = 20;
 float r = d*.5;
 float rest = 0.98;
 //boolean launch = true;
+//starting ball's features
 Vec2 velStart;
 Vec2 ballStart;
 
@@ -33,15 +34,7 @@ Flipper flipper1;
 Flipper flipper2;
 //Circle c1;
 
-//flipper trial
-// Line segment
-// Vec2 flipper_base = new Vec2(50,550);
-// float min_angle = -0.6;
-// float max_angle = 0.9;
-// float angle = max_angle;
-// float line_length = 120;
-// float angular_velocity = -2.0;
-
+//tip function written by Dr. Guy and slightly modified 
 Vec2 getTip(Flipper f){
   // Compute tip as a function of angle and line_length
   Vec2 tip = new Vec2(0,0);
@@ -50,7 +43,6 @@ Vec2 getTip(Flipper f){
   return tip;
 }
 
-//flipper
 
 //screen and ball set up
 void setup () {
@@ -59,30 +51,27 @@ void setup () {
     //create ball
     ballStart = new Vec2(width-d, height-d);
     velStart = new Vec2(0,-400);
-
-    //create flipper
-    // Vec2 flipper_base = new Vec2(50,350);
-    // float min_angle = -0.6;
-    // float max_angle = 0.9;
-    // float angle = max_angle;
-    // float line_length = 120;
-    // float angular_velocity = -2.0;
     
+    //Creates left and right flippers
     flipper1 = new Flipper (new Vec2(50,550), -0.6, 0.9, 100, -2.0);
     flipper2 = new Flipper (new Vec2(350,550), -0.6, 0.9, -100, -2.0);
     File();
     
+    //define special case obstacle
     curve = l.get(0);
     launch = b.get(0);
+    
+    //sets flags
     cCollide  = false;
     paused = true;
     gameOver = false;
     
+    //adds original ball and velocity to arraylist
     balls.add(ballStart);
     velocities.add(velStart);
 }
 
-//flipper physics
+//flipper physics taken from Dr. Guy's code
 void fPhysicsComp(float dt, Flipper f) {
     //flipper trial
     f.angle += f.angular_velocity*dt;
@@ -95,7 +84,6 @@ void fPhysicsComp(float dt, Flipper f) {
         f.angular_velocity *= -1;
     }
 }
-//done
 
 //function to update ball physics
 void physicsComp(float dt, Vec2 ball, Vec2 vel) {
@@ -115,7 +103,7 @@ void update(float dt, Vec2 ball, Vec2 vel) {
     if (right) fPhysicsComp(dt, flipper2);
 
    //adjusting to fit screen
-    if (ball.y > height - r) {  //bottom of the screen 
+    if (ball.y > height - r) {  //end game if hits bottom of the screen 
         ball.y = height - r;
         gameOver = true;
     }
@@ -136,25 +124,27 @@ void update(float dt, Vec2 ball, Vec2 vel) {
     for (int i = 0; i < l.size(); i++) {
       detect.CircleLine(ball, r, vel, l.get(i), rest);
     }
+    //check for ball box collision
     for (int i = 0; i < b.size(); i++) {
       detect.CircleBox(ball, r, vel, b.get(i), rest);
     }
+    //check for circle circle collision
     for (int i = 0; i <c.size(); i++) {
       detect.CircleCircle(ball, r, vel, c.get(i), rest);
     }
     
+    //checks if flipper collision
     detect.BallFlipper(ball, r, vel, rest, flipper1);
     detect.BallFlipper(ball, r, vel, rest, flipper2);
-    //println(l.get(0).x1);
+    
 }
 
 //draw images
 
 void draw() {
-    //if (!paused) update(1/frameRate, ball, vel);
-    if (!paused) updateBalls();
+    if (!paused) updateBalls(); //launch ball when space button pressed
     
-    if (gameOver) {
+    if (gameOver) {  //game over screen
       background(255);
        fill(0);
        textSize(32);
@@ -162,6 +152,7 @@ void draw() {
        text("Game Over", width / 2, height / 2);
     }
     else{
+      //Sets background
       if (bgc > 0) {
       background(bgc); //White background
       }
@@ -169,9 +160,7 @@ void draw() {
       image(backgroundImage, 0, 0, width, height);
       }
       
-      //draw ball
-      //stroke(0,0,0);
-      //fill(10,120,10);
+      //sets stroke and fill color
       stroke(st1, st2, st3);
       fill(f1, f2, f3);
       strokeWeight(2);
@@ -184,17 +173,16 @@ void draw() {
       line(flipper2.flipper_base.x, flipper2.flipper_base.y, tip2.x,tip2.y);
       
 
-      //circle(ballStart.x, ballStart.y, d);
+      //draw balls
       for (Vec2 ba: balls) {
        circle(ba.x, ba.y, d);
       }
       
-      //moving curve
-      //println(cCollide);
-      if (cCollide) {
+      //draw curve
+      if (cCollide) { //out of launch channel
         line(launch.x,launch.y, l.get(0).x2, l.get(0).y2);
       }
-      else {
+      else {  //when game starts
         line(l.get(0).x1, l.get(0).y1, l.get(0).x2, l.get(0).y2);
       }
       
@@ -206,9 +194,9 @@ void draw() {
         circle(circ.x, circ.y, circ.r*2);
       }
     if (l.size() > 1) {  
-    for(int i = 1; i < l.size(); i++) {
-      line(l.get(i).x1, l.get(i).y1, l.get(i).x2, l.get(i).y2);
-    } 
+      for(int i = 1; i < l.size(); i++) {
+        line(l.get(i).x1, l.get(i).y1, l.get(i).x2, l.get(i).y2);
+      } 
   }
     
     }
