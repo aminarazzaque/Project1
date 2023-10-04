@@ -80,19 +80,27 @@
    
    void BallBall(Vec2 ball1, float r, Vec2 vel1, Vec2 ball2, Vec2 vel2, float rest) { //Circle-Circle collision
     //check to see if ball and circle are overlapping
-    //Vec2 dir = ball.minus(circ.pos);
+    Vec2 dir = ball2.minus(ball1);
     float dist = ball1.distanceTo(ball2);
     //Vec2 dir_norm = dir.normalized();
     
      if (dist < (r + r)) {  //collision
      //println(dist, (r+circ.r));
-     Vec2 dir = ball1.minus(ball2);
-     Vec2 dir_norm = dir.normalized();
+     float overlap = (2 * r - dist)/2;
      
-     ball1 = ball1.plus(dir_norm.times(r));
-     ball2 = ball2.plus(dir_norm.times(r));
+     ball1.subtract(dir.times(overlap));
+     ball2.add(dir.times(overlap));
+     //Vec2 dir = ball1.minus(ball2);
+     //Vec2 dir_norm = dir.normalized();
+     
+     //ball1 = ball1.plus(dir_norm.times(r));
+     //ball2 = ball2.plus(dir_norm.times(r));
+     //Vec2 v1 = (vel1.plus(vel2).minus(vel1.minus(vel2).times(rest))).times(.5);
+     //Vec2 v2 = (vel1.plus(vel2).minus(vel2.minus(vel1).times(rest))).times(.5);
      vel1.mul(-1*rest); 
      vel2.mul(-1*rest); 
+     //vel1 = v1;
+     //vel2 = v2;
      //newBalls();
      }
    }

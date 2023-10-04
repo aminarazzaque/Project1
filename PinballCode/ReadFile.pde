@@ -4,9 +4,8 @@ int bgc, st1, st2, st3, f1, f2, f3;
 
 public void File() {
 //read background file
-    //backgroundImage = loadImage("turtle.jpeg");
     
-    String filename = "turtle.txt";
+    String filename = "carat.txt";
     String [] s = loadStrings(filename);
     //println(lines[0]);
     String type = null;

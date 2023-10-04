@@ -88,7 +88,7 @@ void fPhysicsComp(float dt, Flipper f) {
 //function to update ball physics
 void physicsComp(float dt, Vec2 ball, Vec2 vel) {
 
-     Vec2 acc = new Vec2(0, 45);
+     Vec2 acc = new Vec2(0, 80);
      vel.add(acc.times(dt));
      ball.add(vel.times(dt));
 }
@@ -163,7 +163,7 @@ void draw() {
       //sets stroke and fill color
       stroke(st1, st2, st3);
       fill(f1, f2, f3);
-      strokeWeight(2);
+      //strokeWeight(2);
 
       //draw flipper1
       Vec2 tip1 = getTip(flipper1);
